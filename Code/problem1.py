@@ -53,7 +53,7 @@ while(cap.isOpened()):
         # get current video frame
         frame = cv2.resize(frame, (0, 0), fx = 0.5, fy = 0.5)
         gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        ret, thresh = cv2.threshold(gray_frame, 190, 255, 0)
+        ret, thresh = cv2.threshold(gray_frame, 191, 255, 0)
         
         # get corners
         corners = get_artag_corners(frame, thresh, 1)

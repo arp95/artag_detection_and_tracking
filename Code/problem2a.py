@@ -58,7 +58,7 @@ while(cap.isOpened()):
         lena_list = []
         frame = cv2.resize(frame, (0, 0), fx = 0.5, fy = 0.5)
         gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        ret, thresh = cv2.threshold(gray_frame, 190, 255, 0)
+        ret, thresh = cv2.threshold(gray_frame, 191, 255, 0)
         
         # get corners
         lena_overlap = np.zeros(frame.shape, dtype="uint8")
@@ -72,14 +72,15 @@ while(cap.isOpened()):
             new_homography_matrix = get_homography_matrix(new_world_points, corner)
             warp_lena = warp_perspective(lena_frame, new_homography_matrix, (frame.shape[1], frame.shape[0]))
 
-            val = 0
-            for index1 in range(0, warp_lena.shape[0]):
-                for index2 in range(0, warp_lena.shape[1]):
-                    if(warp_lena[index1, index2, 0] != 0 or warp_lena[index1, index2, 1] != 0 or warp_lena[index1, index2, 2] != 0):
-                        val = val + 1
+            #val = 0
+            #for index1 in range(0, warp_lena.shape[0]):
+            #    for index2 in range(0, warp_lena.shape[1]):
+            #        if(warp_lena[index1, index2, 0] != 0 or warp_lena[index1, index2, 1] != 0 or warp_lena[index1, index2, 2] != 0):
+            #            val = val + 1
 
-            if(val < 5000):
-                lena_list.append(warp_lena)
+            #print(val)
+            #if(val < 8000):
+            lena_list.append(warp_lena)
             #lena_overlap = cv2.add(lena_overlap, warp_lena)
 
             if(count%50 == 0):
