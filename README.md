@@ -6,10 +6,6 @@ Shantam Bajpai
 Arpit Aggarwal
 
 
-### Example of a Warped AR Tag
-![Screenshot](outputs/output1.jpg)
-
-
 ### Example of finding the orientation of the AR Tag using Homography
 ![Screenshot](outputs/output2.jpg)
 
@@ -51,13 +47,13 @@ To run the code for problem 2b, follow the following commands:
 
 ```
 cd Code/
-python problem2b.py 'video_path(in .mp4 format)' 'output_video_path(in .avi format)'
+python problem2b.py 'video_path(in .mp4 format)'
 ```
-where, video_path and output_video_path are the paths for input video and output video path respectively. For example, running the python file on my local setup was:
+where, video_path is the path for the input video. For example, running the python file on my local setup was:
 
 ```
 cd Code/
-python problem2b.py ../data/Tag0.mp4 ../data/cube_tag0.avi
+python problem2b.py ../data/Tag0.mp4
 ```
 
 
