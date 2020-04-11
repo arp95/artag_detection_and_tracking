@@ -1,4 +1,4 @@
-# Code for Project 1 of ENPM 673-Perception for Autonomous Robots
+# Code for Project 1 of ENPM 673 - Perception for Autonomous Robots
 
 
 ### Authors
