@@ -32,16 +32,15 @@ import dlib
 args = sys.argv
 path_video = ""
 output_path_video = ""
-if(len(args) > 2):
+if(len(args) > 1):
     path_video = args[1]
-    output_path_video = args[2]
 
 # define constants
 dimension = 200
 world_points = np.array([[0, 0], [dimension - 1, 0], [dimension - 1, dimension - 1], [0, dimension - 1]], dtype="float32")
 cap = cv2.VideoCapture(path_video)
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.VideoWriter(output_path_video, fourcc, 20.0, (960, 540))
+out = cv2.VideoWriter("output_problem1.avi", fourcc, 20.0, (960, 540))
 tracker = None
 
 # read video
