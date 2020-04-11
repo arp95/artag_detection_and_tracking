@@ -31,9 +31,8 @@ import sys
 args = sys.argv
 path_video = ""
 output_path_video = ""
-if(len(args) > 2):
+if(len(args) > 1):
     path_video = args[1]
-    output_path_video = args[2]
 
 # define constants
 dimension = 200
@@ -45,7 +44,7 @@ camera_matrix = np.array([[1406.08415449821, 0, 0],
                                       [1014.13643417416, 566.347754321696, 1]]).T
 cap = cv2.VideoCapture(path_video)
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.VideoWriter(output_path_video, fourcc, 20.0, (960, 540))
+out = cv2.VideoWriter("output_problem2b.avi", fourcc, 20.0, (960, 540))
 
 # read video
 count = 0
