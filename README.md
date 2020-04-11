@@ -6,18 +6,30 @@ Shantam Bajpai
 Arpit Aggarwal
 
 
+### Example of a Warped AR Tag
+![Screenshot](outputs/output1.jpg)
+
+
+### Example of finding the orientation of the AR Tag using Homography
+![Screenshot](outputs/output2.jpg)
+
+
+### Example of projecting Lena image on the AR Tag using Homography
+![Screenshot](outputs/output3.jpg)
+
+
 ### Instructions for running the code
 To run the code for problem 1, follow the following commands:
 
 ```
 cd Code
-python problem1.py 'video_path(in .mp4 format)' 'output_video_path(in .avi format)'
+python problem1.py 'video_path(in .mp4 format)'
 ```
-where, video_path and output_video_path are the paths for input video and output video. For example, running the python file on my local setup was:
+where, video_path is the path for input video. For example, running the python file on my local setup was:
 
 ```
 cd Code/
-python problem1.py ../data/Tag0.mp4 ../data/output_tag0.avi
+python problem1.py ../data/Tag0.mp4
 ```
 
 
@@ -54,42 +66,13 @@ Problem 1:
 Output for Tag0.mp4: 
 https://drive.google.com/file/d/11YO94wywqBKN62c0E65OJwXRgwI1eZ_Y/view?usp=sharing
 
-Output for Tag1.mp4: 
-https://drive.google.com/file/d/1b7LpS0HH4l9tv6YXx47REg9rYkVGy1bL/view?usp=sharing
-
-Output for Tag2.mp4: 
-https://drive.google.com/file/d/1kpQB3M2mu3ojhSEC6SKd59kX_adKKkox/view?usp=sharing
-
-Output for multipleTags.mp4: 
-https://drive.google.com/file/d/12WFTkq0rqspGVlMzmaMjdsGEkiSSLePc/view?usp=sharing
-
-
 Problem 2a:
 Output for Tag0.mp4: 
 https://drive.google.com/file/d/1nrU5DAQNK8B4u_3m6UVGBilAHh0UDNV_/view?usp=sharing
 
-Output for Tag1.mp4: 
-https://drive.google.com/file/d/1IEcXiP9KNthmUs_ZSsamFw9oGX2uLRFx/view?usp=sharing
-
-Output for Tag2.mp4: 
-https://drive.google.com/file/d/1Hlv3Ev0pegsXVgcIbRf4Y4sJNHQb0bPW/view?usp=sharing
-
-Output for multipleTags.mp4: 
-https://drive.google.com/file/d/1S7-KiXawOdxo_jJNEQa8sMOmuIW2C-ze/view?usp=sharing
-
-
 Problem 2b:
 Output for Tag0.mp4: 
 https://drive.google.com/file/d/1dRk6aS0kljCm1NHKR-4Z2OXBVUpUPnLC/view?usp=sharing
-
-Output for Tag1.mp4: 
-https://drive.google.com/file/d/1djvfrd3XrP_0NHXGPMiAY1qfvOTVf5fa/view?usp=sharing
-
-Output for Tag2.mp4: 
-https://drive.google.com/file/d/1hoEnWk1q0rfmp36p4817aUwy8EFp0adm/view?usp=sharing
-
-Output for multipleTags.mp4: 
-https://drive.google.com/file/d/15QNMr6t-hxyGhuVeqLguC20cKE7MRswt/view?usp=sharing
 
 
 ### Software Required
