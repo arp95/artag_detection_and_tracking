@@ -23,10 +23,11 @@
  *  DEALINGS IN THE SOFTWARE.
 """
 
+
 # header files
 from utils import *
 import sys
-import dlib
+
 
 # set data path
 args = sys.argv
@@ -71,17 +72,7 @@ while(cap.isOpened()):
             binary_code, orientation, new_world_points = get_artag_id(gray_warp_artag, dimension)
             new_homography_matrix = get_homography_matrix(new_world_points, corner)
             warp_lena = warp_perspective(lena_frame, new_homography_matrix, (frame.shape[1], frame.shape[0]))
-
-            #val = 0
-            #for index1 in range(0, warp_lena.shape[0]):
-            #    for index2 in range(0, warp_lena.shape[1]):
-            #        if(warp_lena[index1, index2, 0] != 0 or warp_lena[index1, index2, 1] != 0 or warp_lena[index1, index2, 2] != 0):
-            #            val = val + 1
-
-            #print(val)
-            #if(val < 8000):
             lena_list.append(warp_lena)
-            #lena_overlap = cv2.add(lena_overlap, warp_lena)
 
             if(count%50 == 0):
                 print("Orientation is: " + orientation)
