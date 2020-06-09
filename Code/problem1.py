@@ -23,10 +23,11 @@
  *  DEALINGS IN THE SOFTWARE.
 """
 
+
 # header files
 from utils import *
 import sys
-import dlib
+
 
 # set data path
 args = sys.argv

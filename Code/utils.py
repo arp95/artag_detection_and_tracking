@@ -23,13 +23,14 @@
  *  DEALINGS IN THE SOFTWARE.
 """
 
+
 # header files
 import cv2
 import numpy as np
 from scipy.spatial import distance as dist
 
 
-# Get ID of the tag
+# Get ID of the artag (using the birds-eye view image of the artag, obtained from the homography matrix)
 def get_artag_id(image, dimension):
     ret, image_thresh = cv2.threshold(image, 190, 255, 0)
     cropped_image_thresh = image_thresh[50:150, 50:150]
@@ -110,7 +111,7 @@ def get_artag_id(image, dimension):
         return (np.array([fourth_bit, third_bit, second_bit, first_bit]), "BR", new_points)
 
     
-# function to order points from top-left to bottom-right
+# function to order points from top-left to bottom-right (used for calculation of homography matrix)
 # reference: https://www.pyimagesearch.com/2016/03/21/ordering-coordinates-clockwise-with-python-and-opencv/
 def order_points(points):
     # sort points along columns
@@ -179,7 +180,7 @@ def warp_perspective(image, homography_matrix, dimension):
     return warped_image
 
 
-# find homography matrix between two planes
+# find homography matrix using the four point correspondences
 # reference: https://www.pyimagesearch.com/2014/05/05/building-pokedex-python-opencv-perspective-warping-step-5-6/
 # reference: https://www.learnopencv.com/image-alignment-feature-based-using-opencv-c-python/
 def get_homography_matrix(corner, world_points):
@@ -204,17 +205,8 @@ def get_homography_matrix(corner, world_points):
     eig_values_2 = eig_values_2[index_2]
     eig_vects_2 = eig_vects_2[:, index_2]
 
-    # construct u, s, and v matrix
-    u_matrix = eig_vects_1
+    # compute homography matrix
     v_matrix = eig_vects_2
-    s_matrix = np.zeros((a_matrix.shape[0], a_matrix.shape[1]))
-    index = 0
-    for value in eig_values_1:
-        s_matrix[index, index] = np.sqrt(value)
-        index = index + 1
-
-    # compute x or homography matrix
-    re_a_matrix = np.matmul(u_matrix, np.matmul(s_matrix, v_matrix.T))
     homography_mat = np.zeros((a_matrix.shape[1], 1))
     for index in range(0, a_matrix.shape[1]):
         homography_mat[index, 0] = v_matrix[index, v_matrix.shape[1] - 1]
@@ -223,7 +215,7 @@ def get_homography_matrix(corner, world_points):
     # scale the homography matrix by h[3][3] element
     for index1 in range(0, 3):
         for index2 in range(0, 3):
-            homography_mat[index1][index2] = homography_mat[index1][index2]/homography_mat[2][2]
+            homography_mat[index1][index2] = homography_mat[index1][index2] / homography_mat[2][2]
     return homography_mat
 
 
