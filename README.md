@@ -84,9 +84,7 @@ https://drive.google.com/file/d/1dRk6aS0kljCm1NHKR-4Z2OXBVUpUPnLC/view?usp=shari
 
 ### Credits
 The following links were helpful for this project:
-1. https://www.pyimagesearch.com/2016/03/21/ordering-coordinates-clockwise-with-python-and-
-opencv/
-2. https://www.pyimagesearch.com/2014/05/05/building-pokedex-python-opencv-perspective-warping-
-step-5-6/
+1. https://www.pyimagesearch.com/2016/03/21/ordering-coordinates-clockwise-with-python-and-opencv/
+2. https://www.pyimagesearch.com/2014/05/05/building-pokedex-python-opencv-perspective-warping-step-5-6/
 3. https://www.learnopencv.com/image-alignment-feature-based-using-opencv-c-python/
 4. https://www.learnopencv.com/tag/projection-matrix/
