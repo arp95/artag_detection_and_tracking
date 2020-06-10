@@ -2,15 +2,26 @@
 
 
 ### Authors
-Shantam Bajpai
 Arpit Aggarwal
+Shantam Bajpai
 
 
-### Example of finding the orientation of the AR Tag using Homography
+### Introduction to the Project
+The project was divided in three phases as explained below:<br>
+1. The first task was detecting the AR-Tag corners and then using the homography concept to find the AR-Tag ID and its orientation.<br>
+2. The second task was superimposing an image on the AR-Tag.<br> 
+3. The third task was superimposing a 3D object on the AR-Tag.
+
+
+### Software Required
+To run the .py files, use Python 3. Standard Python 3 libraries like OpenCV, Numpy, Scipy and matplotlib are used.
+
+
+### Example of finding the orientation of the AR-Tag using Homography
 ![Screenshot](outputs/output2.jpg)
 
 
-### Example of projecting Lena image on the AR Tag using Homography
+### Example of projecting Lena image on the AR-Tag using Homography
 ![Screenshot](outputs/output3.jpg)
 
 
@@ -71,5 +82,11 @@ Output for Tag0.mp4:
 https://drive.google.com/file/d/1dRk6aS0kljCm1NHKR-4Z2OXBVUpUPnLC/view?usp=sharing
 
 
-### Software Required
-To run the .py files, use Python 3. Standard Python 3 libraries like OpenCV, Numpy, Scipy and matplotlib are used.
+### Credits
+The following links were helpful for this project:
+1. https://www.pyimagesearch.com/2016/03/21/ordering-coordinates-clockwise-with-python-and-
+opencv/
+2. https://www.pyimagesearch.com/2014/05/05/building-pokedex-python-opencv-perspective-warping-
+step-5-6/
+3. https://www.learnopencv.com/image-alignment-feature-based-using-opencv-c-python/
+4. https://www.learnopencv.com/tag/projection-matrix/
